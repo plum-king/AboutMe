@@ -1,0 +1,118 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--부트스트랩 CDN 코드-->
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <title>MY PAGE</title>
+    <style>
+        .box1 {
+            position: relative;
+            background-color: rgb(165, 186, 214);
+
+        }
+
+        .box2 {
+            width: 400px;
+            height: 42.6rem;
+            background-color: rgba(31, 101, 192, 0.623);
+            border-radius: 10px;
+            border-style: groove;
+        }
+
+        .box3 {
+            width: 190px;
+            height: 190px;
+            border-radius: 70%;
+            margin-left: 99px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .profile {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .icon {
+            margin-left: 75px;
+        }
+
+        .call {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav nav-pills nav-justified">
+        <li role="presentation" class="nav-item">
+            <a class="nav-link" href="{%url 'myhome'%}">MYHOME</a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a class="nav-link" href="{%url 'hobby'%}">HOBBY</a>
+        </li>
+        <li role="presentation" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">FAVORITES</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item active" href="{%url 'music'%}">MUSIC</a>
+                <a class="dropdown-item" href="{%url 'pictures'%}">PICTURES</a>
+                <a class="dropdown-item" href="{%url 'place'%}">PLACE</a>
+            </div>
+        </li>
+    </ul>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3" style="background: #BDBDBD;">
+                <img class="profile" src="#">
+            </div>
+            <br>
+            <p>
+                <center><b>황지수</b><br>Hwang Ji Soo</center>
+                <br>
+                <hr>
+                <br>
+                <img class="icon" src="{% static 'phone-call.png'%}" height=30 alt=""> <span class="call"> <b>
+                        010-3301-5116</b> </span>
+                <br>
+                <br>
+                <img class="icon" src="{% static 'mail.png'%}" height=30 alt=""> <span class="call">
+                    <b>jeesoo0908@gmail.com</b> </span>
+                <br>
+                <br>
+                <img class="icon" src="{% static 'github.png'%}" height=30 alt=""> <span class="call"> <b>plum-king</b>
+                </span>
+                <br>
+                <br>
+                <img class="icon" src="{% static 'instagram.png'%}" height=30 alt=""> <span class="call">
+                    <b>jis__h908</b> </span>
+                <br>
+                <br>
+                <img class="icon" src="{% static 'blogging.png'%}" height=30 alt=""> <span class="call">
+                    <b>blog.naver.com/jeesoo0908</b> </span>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
