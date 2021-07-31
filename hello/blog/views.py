@@ -1,15 +1,19 @@
-from django.shortcuts import render
-from .models import Blog
+from django.shortcuts import redirect, render
+from .models import BlogVisiter, Music, Hobby, Place, Pictures
+from django.utils import timezone
+
 # Create your views here.
 
 def intro(request):
     return render(request, "intro.html")
 
 def myhome(request):
-    return render(request, "myhome.html")
+    myhomes = BlogVisiter.objects.all()
+    return render(request, "myhome.html", {'myhomes': myhomes})
 
 def hobby(request):
-    return render(request, "hobby.html")
+    hob = Hobby.objects.all()
+    return render(request, "hobby.html", {'hob': hob})
 
 def music(request):
     return render(request, "music.html")
@@ -19,3 +23,14 @@ def pictures(request):
 
 def place(request):
     return render(request, "place.html")
+
+def guest(request):
+    return render(request, "guest.html")
+
+def create(request):
+    new_blogvisit = BlogVisiter()
+    new_blogvisit.name = request.POST['name']
+    new_blogvisit.content = request.POST['body']
+    new_blogvisit.date = timezone.now()
+    new_blogvisit.save()
+    return redirect('myhome')

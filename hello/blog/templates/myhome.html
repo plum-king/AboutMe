@@ -75,7 +75,7 @@
             
         }
         .box4 > h1 {
-            margin-top: 90px;
+            margin-top: 50px;
             text-align: center;
         }
         .box4 > h4 {
@@ -89,6 +89,18 @@
         .content{
             margin-left: 300px;
             font-size: 20px;
+        }
+        .box4 > a{
+            justify-content: center;
+            display: flex;
+        }
+
+        .box5{
+            margin-top: 30px;
+            margin-left: 200px;
+            width: 500px;
+            height: 200px;
+            background-color: #BDBDBD;
         }
     </style>
 </head>
@@ -146,13 +158,15 @@
         <div class="box4">
             <h1>WELCOME TO MY PAGE!</h1><br>
             <h4>황지수 Hwang Ji Soo </h4><br>
-            <h5><strong>NOW</strong></h5><br>
-            <p class="content">
-                > 멋쟁이 사자처럼 9기 <br>
-                > 성신여자대학교 컴퓨터공학과 20학번<br>
-                > 교내 동아리 init 2기 <br>
-                > 소프트웨어 경진대회 준비중.... <br>
-            </p>
+            <a href="{% url 'guest'%}">방명록 작성하기</a>
+            <div class="box5" style = "color: black; text-align: center; overflow:auto; ">
+                {% for myhome in myhomes %}
+                    <b style="margin-left: 10px;">{{myhome.name}}</b>
+                    <br>
+                    <p style="margin-left: 10px;">{{myhome.content}}</p>
+                {% endfor %}
+            </div>
+        </div>
         </div>
     </div>
 

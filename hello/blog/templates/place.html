@@ -60,6 +60,71 @@
         .call {
             margin-left: 20px;
         }
+
+        .box4 {
+            position: absolute;
+            width: 1200px;
+            height: 100%;
+            top:0;
+            left: 400px;
+            z-index: 10;
+            background-color: rgb(148, 177, 216);
+            border-style: double;
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.856);
+            border-color: white;
+        }
+
+        .box4 > h1 {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .first{
+            position: absolute;
+            z-index: 20;
+            top: 120px;
+            left: 105px;
+            height: 75%;
+            width: 1000px;
+        }
+
+        .album1{
+            position: absolute;
+            z-index: 30;
+            top: 0px;
+            left: 50px;
+            height: 100%;
+            width: 400px;
+            background-color: lightslategrey;
+        }
+
+        .album2{
+            position: absolute;
+            z-index: 30;
+            top: 0px;
+            left: 550px;
+            height: 100%;
+            width: 400px;
+            background-color: wheat;
+            color: black;
+        }
+
+        .album2 > h3{
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .album2 > h4{
+            text-align: center;
+        }
+
+        .album2 > h5{
+            line-height: 50px;
+            text-align: center;
+        }
+
+
     </style>
 </head>
 
@@ -111,6 +176,32 @@
                 <img class="icon" src="{% static 'blogging.png'%}" height=30 alt=""> <span class="call">
                     <b>blog.naver.com/jeesoo0908</b> </span>
             </p>
+        </div>
+        <div class ="box4">
+            <h1><b>PLACE</b></h1>
+            <div class = "first">
+                <div class= "album1">
+                    <img src="{% static 'swiss.png'%}" alt="">
+                </div>
+                <div class = "album2">
+                    <h3><b>가장 좋아하는 곳</b></h3>
+                    <br>
+                    <p>
+                        <h4>스위스</h4><br>
+                        <h5>
+                            <b>2020-01-14 ~ 2020-01-22</b>
+                            <br>
+                            유럽 여행 중 가장 힐링이 되었던 곳
+                            <br>
+                            너무 예쁜 자연 경관
+                            <br>
+                            탁트인 전망 & '눈'을 보고 싶다면
+                            <br> 
+                            꼭!! 가보세요!
+                        </h5>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blog import views
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.intro, name="intro"),
@@ -24,4 +26,6 @@ urlpatterns = [
     path('music/', views.music, name="music"),
     path('pictures/', views.pictures, name="pictures"),
     path('place/', views.place, name="place"),
+    path('guest/', views.guest, name="guest"),
+    path('create/', views.create, name="create"),
 ]

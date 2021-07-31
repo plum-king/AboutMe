@@ -60,6 +60,69 @@
         .call {
             margin-left: 20px;
         }
+
+        .box4 {
+            position: absolute;
+            width: 1200px;
+            height: 100%;
+            top:0;
+            left: 400px;
+            z-index: 10;
+            background-color: rgb(148, 177, 216);
+            border-style: double;
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.856);
+            border-color: white;
+        }
+
+        .box4 > h1 {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .first{
+            position: absolute;
+            z-index: 20;
+            top: 120px;
+            left: 105px;
+            height: 75%;
+            width: 1000px;
+        }
+
+        .album1{
+            position: absolute;
+            z-index: 30;
+            top: 0px;
+            left: 50px;
+            height: 100%;
+            width: 400px;
+            background-color: lightslategrey;
+        }
+
+        .album2{
+            position: absolute;
+            z-index: 30;
+            top: 0px;
+            left: 550px;
+            height: 100%;
+            width: 400px;
+            background-color: wheat;
+            color: black;
+        }
+
+        .album2 > h3{
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .album2 > h4{
+            text-align: center;
+        }
+
+        .album2 > h5{
+            line-height: 50px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -111,6 +174,32 @@
                 <img class="icon" src="{% static 'blogging.png'%}" height=30 alt=""> <span class="call">
                     <b>blog.naver.com/jeesoo0908</b> </span>
             </p>
+        </div>
+        <div class ="box4">
+            <h1><b>PICTURES</b></h1>
+            <div class = "first">
+                <div class= "album1">
+                    <img src="{% static 'paris.png'%}" alt="">
+                </div>
+                <div class = "album2">
+                    <h3><b>좋아하는 사진</b></h3>
+                    <br>
+                    <p>
+                        <h4>풍경사진</h4><br>
+                        <h5>
+                            <b>제주도, 경주, 프랑스 등</b>
+                            <br>
+                            추억으로 남는 건 사진 뿐
+                            <br>
+                            인물 사진 찍는 것은 싫어해도 
+                            <br>
+                            풍경 사진만큼은 많이 찍는 편
+                            <br>
+                            잘은 못 찍어도 뿌듯합니ㄷr..
+                        </h5>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

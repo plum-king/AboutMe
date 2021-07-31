@@ -1,0 +1,42 @@
+<style>
+    body{
+        background-color: rgb(165, 186, 214);
+    }
+
+    h1{
+        text-align: center;
+        margin-top: 100px;
+        font-size: 50px;
+    }
+
+    form > p{
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn{
+        width: fit-content;
+        margin: auto;
+    }
+
+    .btnType{
+        background-color: aliceblue;
+        font-size: 20px;
+        border-radius: 10%;
+    }
+
+</style>
+
+
+<body>
+    <h1>방명록 작성</h1>
+
+    <form action="{% url 'create' %}" method="POST">
+        {%csrf_token%}
+        <br>
+        <p>방문자 이름 &nbsp; <input type="text" name="name"></p>
+        <br>
+        <p>한마디 &nbsp; <textarea name="body" id="" cols="30" rows="10"></textarea></p>
+        <div class="btn"><button type="submit" class="btnType"> 등록 </button></div>
+    </form>
+</body>
